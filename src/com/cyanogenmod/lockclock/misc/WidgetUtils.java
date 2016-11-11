@@ -188,6 +188,7 @@ public class WidgetUtils {
     private static final String[] CLOCK_PACKAGES = new String[] {
         "com.google.android.deskclock",
         "com.android.deskclock",
+        "org.omnirom.deskclock",
     };
 
     public static Intent getDefaultClockIntent(Context context) {
