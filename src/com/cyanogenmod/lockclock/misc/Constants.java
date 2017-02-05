@@ -24,6 +24,7 @@ public class Constants {
     public static final String PREF_NAME = "LockClock";
 
     // Widget Settings
+    public static final String SHOW_CLOCK = "show_clock";
     public static final String CLOCK_DIGITAL = "clock_digital";
     public static final String CLOCK_FONT = "clock_font";
     public static final String CLOCK_FONT_MINUTES = "clock_font_minutes";

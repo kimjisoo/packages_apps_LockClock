@@ -104,6 +104,7 @@ public class ClockWidgetService extends IntentService {
         // Get things ready
         RemoteViews remoteViews;
         boolean digitalClock = Preferences.showDigitalClock(this);
+        boolean showClock = Preferences.showClock(this);
         boolean showWeather = Preferences.showWeather(this);
         boolean showWeatherWhenMinimized = Preferences.showWeatherWhenMinimized(this);
 
@@ -157,6 +158,9 @@ public class ClockWidgetService extends IntentService {
             // Hide the calendar panel if not visible
             remoteViews.setViewVisibility(R.id.calendar_panel,
                     showCalendar ? View.VISIBLE : View.GONE);
+
+            remoteViews.setViewVisibility(R.id.clock_panel,
+                    showClock ? View.VISIBLE : View.GONE);
 
             boolean canFitWeather = smallWidget
                     || WidgetUtils.canFitWeather(this, id, digitalClock, isKeyguard);

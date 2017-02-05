@@ -38,6 +38,7 @@ public class ClockPreferences extends PreferenceFragment implements
     private ListPreference mClockFontColor;
     private ListPreference mAlarmFontColor;
     private SwitchPreference mAmPmToggle;
+    private SwitchPreference mShowClock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class ClockPreferences extends PreferenceFragment implements
         addPreferencesFromResource(R.xml.preferences_clock);
 
         mContext = getActivity();
+        mShowClock = (SwitchPreference) findPreference(Constants.SHOW_CLOCK);
         mClockFontColor = (ListPreference) findPreference(Constants.CLOCK_FONT_COLOR);
         mAlarmFontColor = (ListPreference) findPreference(Constants.CLOCK_ALARM_FONT_COLOR);
         mAmPmToggle = (SwitchPreference) findPreference(Constants.CLOCK_AM_PM_INDICATOR);

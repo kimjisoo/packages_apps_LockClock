@@ -22,6 +22,11 @@
     <PreferenceCategory android:title="@string/general_category">
 
         <SwitchPreference
+            android:key="show_clock"
+            android:title="@string/clock_title"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="clock_digital"
             android:title="@string/use_digital_clock_title"
             android:summary="@string/use_digital_clock_summary"
